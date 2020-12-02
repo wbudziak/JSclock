@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/style.css">
+   
+</head>
+<body>
+    <div class="clockContainer">
+        <div class="clock">
+            <div class="circle"></div>
+            <img src="tarcza.png" alt="">
+            <div class="godzina"></div>
+            <div class="minuta"></div>
+            <div class="sekunda"></div>
+        </div>
+    </div>
+    <div class="mainContainer">
+        <div class="inputContainer">
+            <input pattern="[0-9]*" id="second" type="number" maxlength="2" min="0"max="59" placeholder="Seconds" >
+            <input pattern="[0-9]*" id="minute" type="number" maxlength="2" min="0" max="59" placeholder="Minutes">
+            <input pattern="[0-9]*" id="hour" type="number" maxlength="2" min="0" max="12" placeholder="Hours">
+        </div>
+        <div class="spanContainer">
+            <span>( ͡° ͜ʖ ͡°)</span>
+           
+        </div>
+        <div class="btnContainer"><button>set the clock</button>
+        </div>
+    </div> 
+    <script src="main.js"></script>
+</body>
+</html>
