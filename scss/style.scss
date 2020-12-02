@@ -97,10 +97,12 @@ body{
     justify-content: space-between;
     max-width: 600px;
     width: 100%;
-    max-height: 250px;
+    max-height: 150px;
     height: 100%;
 
-    
+    @media(max-width: 415px){
+        margin-top: 2vh;
+    }
     .inputContainer{
         width: 100%;
         display: flex;
@@ -123,7 +125,8 @@ body{
             @media(max-width: 415px){
                 width: 25%;
                 height: 50px;
-                margin: 3%;
+                margin-left: 3%;
+                margin-right: 3%;
             }
            
         }
@@ -141,22 +144,27 @@ body{
             text-align: center;
             transition: 3s;
             @media(max-width: 415px){
-                display: none;
+                margin-bottom: 1vh;
             }
         }
         span.clicked{
             display: block;
             @media(max-width: 415px){
-                display: none;
+                // display: none;
             }
         }
     }
     .btnContainer{
-        order: 1;
+        // order: 1;
         display: flex;
-        flex-direction: column;
+        @media(max-width: 415px){
+            flex-direction: column;
+            align-items: center;
+        }
        button{
-           margin: 10px;
+           margin-left: 10px;
+           margin-right: 10px;
+
            width: 250px;
            height: 50px;
            border-radius: 10px;
@@ -167,12 +175,7 @@ body{
            transition: .3s linear;
            font-size: 20px;
            @media(max-width: 415px){
-            background-color: rgb(253, 126, 42);
-            color: white;
-            outline: none;
-            border: none;
-            order: 1;
-            margin-bottom: 10px;
+            margin-top: 1vh;
         }
         
         }

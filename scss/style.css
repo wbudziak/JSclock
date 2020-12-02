@@ -131,8 +131,14 @@ body {
           justify-content: space-between;
   max-width: 600px;
   width: 100%;
-  max-height: 250px;
+  max-height: 150px;
   height: 100%;
+}
+
+@media (max-width: 415px) {
+  .mainContainer {
+    margin-top: 2vh;
+  }
 }
 
 .mainContainer .inputContainer {
@@ -171,7 +177,8 @@ body {
   .mainContainer .inputContainer input[type=number] {
     width: 25%;
     height: 50px;
-    margin: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 
@@ -196,7 +203,7 @@ body {
 
 @media (max-width: 415px) {
   .mainContainer .spanContainer span {
-    display: none;
+    margin-bottom: 1vh;
   }
 }
 
@@ -204,27 +211,27 @@ body {
   display: block;
 }
 
-@media (max-width: 415px) {
-  .mainContainer .spanContainer span.clicked {
-    display: none;
-  }
-}
-
 .mainContainer .btnContainer {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+}
+
+@media (max-width: 415px) {
+  .mainContainer .btnContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .mainContainer .btnContainer button {
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   width: 250px;
   height: 50px;
   border-radius: 10px;
@@ -239,14 +246,7 @@ body {
 
 @media (max-width: 415px) {
   .mainContainer .btnContainer button {
-    background-color: #fd7e2a;
-    color: white;
-    outline: none;
-    border: none;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin-bottom: 10px;
+    margin-top: 1vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
