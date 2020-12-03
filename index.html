@@ -10,12 +10,33 @@
 </head>
 <body>
     <div class="clockContainer">
+        <div class="underClock"></div>
+
         <div class="clock">
             <div class="circle"></div>
-            <img src="tarcza.png" alt="">
+            <!-- <img src="pudzian.jpg" alt=""> -->
             <div class="godzina"></div>
             <div class="minuta"></div>
             <div class="sekunda"></div>
+
+            <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+                <li><span>7</span></li>
+                <li><span>8</span></li>
+                <li><span>9</span></li>
+                <li><span>10</span></li>
+                <li><span>11</span></li>
+                <li><span>12</span></li>
+            </ul>
+            <div class="digitalFrame">           
+                <span class="digital">00:00:<span style="color: red; font-size: 15px;">00</span></span>
+            </div>
+            <span class="logo">WOITI</span>
         </div>
     </div>
     <div class="mainContainer">
@@ -25,8 +46,7 @@
             <input pattern="[0-9]*" id="hour" type="number" maxlength="2" min="0" max="12" placeholder="Hours">
         </div>
         <div class="spanContainer">
-            <span></span>
-           
+            <span class="reload"></span>
         </div>
         <div class="btnContainer"><button>Set the clock!</button>
             <button class="realTimeButton">Computer time</button>

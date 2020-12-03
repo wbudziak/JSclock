@@ -48,15 +48,153 @@ body {
   }
 }
 
+.clockContainer .underClock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: -5px 3px 1px #5f5c5c;
+          box-shadow: -5px 3px 1px #5f5c5c;
+  border-radius: 50%;
+  width: 420px;
+  height: 420px;
+  background-color: #1f1d1d;
+  z-index: -99999;
+}
+
 .clockContainer .clock {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 1px dashed gray;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  -webkit-box-shadow: inset 20px 50px 100px rgba(0, 0, 0, 0.2), inset 5px 10px 60px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 20px 50px 100px rgba(0, 0, 0, 0.2), inset 5px 10px 60px rgba(0, 0, 0, 0.5);
+}
+
+.clockContainer .clock .digitalFrame {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 1px solid #262b30;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2), inset 1px 1px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2), inset 1px 1px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.clockContainer .clock .digitalFrame .digital {
+  font-size: 19px;
+}
+
+.clockContainer .clock .logo {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.clockContainer .clock ul {
+  list-style: none;
+  padding: 0;
+}
+
+.clockContainer .clock li {
+  position: absolute;
+  text-align: center;
+  line-height: 20px;
+  font-size: 30px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.clockContainer .clock li:nth-child(1) {
+  right: 26%;
+  top: 10%;
+}
+
+.clockContainer .clock li:nth-child(2) {
+  right: 10%;
+  top: 26%;
+}
+
+.clockContainer .clock li:nth-child(3) {
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.clockContainer .clock li:nth-child(4) {
+  right: 10%;
+  top: 69%;
+}
+
+.clockContainer .clock li:nth-child(5) {
+  right: 26%;
+  top: 85%;
+}
+
+.clockContainer .clock li:nth-child(6) {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 5%;
+}
+
+.clockContainer .clock li:nth-child(7) {
+  left: 26%;
+  top: 85%;
+}
+
+.clockContainer .clock li:nth-child(8) {
+  left: 10%;
+  top: 69%;
+}
+
+.clockContainer .clock li:nth-child(9) {
+  left: 5%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.clockContainer .clock li:nth-child(10) {
+  left: 10%;
+  top: 26%;
+}
+
+.clockContainer .clock li:nth-child(11) {
+  left: 26%;
+  top: 10%;
+}
+
+.clockContainer .clock li:nth-child(12) {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 5%;
+}
+
+.clockContainer .clock .onRed {
+  color: red;
+  font-size: 40px;
+}
+
+.clockContainer .clock .onBlack {
+  color: black;
+  font-size: 40px;
 }
 
 .clockContainer .clock img {
   width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .clockContainer .clock .circle {
@@ -65,23 +203,23 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #262b30;
   z-index: 4;
 }
 
 .clockContainer .clock .sekunda {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 50%;
   background-color: red;
   width: 3px;
-  height: 40%;
+  height: 35%;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
-  border-radius: 10px 10px;
+  border-radius: 30% 30% 0 0;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: .3s linear;
@@ -91,31 +229,31 @@ body {
 
 .clockContainer .clock .minuta {
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 50%;
-  background-color: #161414;
-  width: 5px;
-  height: 40%;
+  background-color: #3e4347;
+  width: 3px;
+  height: 30%;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: .6s linear;
   transition: .6s linear;
-  border-radius: 10px 10px;
+  border-radius: 30% 30% 0 0;
   z-index: 1;
 }
 
 .clockContainer .clock .godzina {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
-  background-color: gray;
-  width: 5px;
-  height: 30%;
+  background-color: #3e4347;
+  width: 3px;
+  height: 25%;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
-  border-radius: 10px 10px;
+  border-radius: 30% 30% 0 0;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: .9s linear;
@@ -204,6 +342,8 @@ body {
 }
 
 .mainContainer .spanContainer span {
+  cursor: pointer;
+  color: gray;
   max-width: 150px;
   width: 100%;
   text-align: center;
