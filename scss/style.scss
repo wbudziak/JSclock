@@ -42,6 +42,11 @@ body{
         height: 420px;
         background-color: rgb(31, 29, 29);
         z-index: -99999;
+        @media(max-width: 415px){
+            max-width: 42vh;
+            max-height: 42vh;
+        }
+
     }
     .clock{
         width: 100%;

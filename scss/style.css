@@ -63,6 +63,13 @@ body {
   z-index: -99999;
 }
 
+@media (max-width: 415px) {
+  .clockContainer .underClock {
+    max-width: 42vh;
+    max-height: 42vh;
+  }
+}
+
 .clockContainer .clock {
   width: 100%;
   height: 100%;
