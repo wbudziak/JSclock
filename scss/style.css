@@ -19,6 +19,14 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+@media (max-width: 415px) {
+  body {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 .clockContainer {
   position: relative;
   max-width: 400px;
@@ -32,6 +40,7 @@ body {
 
 @media (max-width: 415px) {
   .clockContainer {
+    margin-top: 9vh;
     max-width: 40vh;
     width: 100%;
     max-height: 40vh;
@@ -42,8 +51,8 @@ body {
 .clockContainer .clock {
   width: 100%;
   height: 100%;
-  border: 1px solid gray;
   border-radius: 50%;
+  border: 1px dashed gray;
 }
 
 .clockContainer .clock img {
@@ -137,7 +146,7 @@ body {
 
 @media (max-width: 415px) {
   .mainContainer {
-    margin-top: 2vh;
+    margin-bottom: 25vh;
   }
 }
 
@@ -164,6 +173,7 @@ body {
 }
 
 .mainContainer .inputContainer input[type=number] {
+  -webkit-appearance: none;
   border: none;
   border: 1px solid gray;
   border-radius: 5px;
