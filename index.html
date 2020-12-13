@@ -3,55 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Clock</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/style.css">
-   
+    <title>Document</title>
 </head>
 <body>
-    <div class="clockContainer">
-        <div class="underClock"></div>
-
-        <div class="clock">
-            <div class="circle"></div>
-            <!-- <img src="pudzian.jpg" alt=""> -->
-            <div class="godzina"></div>
-            <div class="minuta"></div>
-            <div class="sekunda"></div>
-
-            <ul>
-                <li><span>1</span></li>
-                <li><span>2</span></li>
-                <li><span>3</span></li>
-                <li><span>4</span></li>
-                <li><span>5</span></li>
-                <li><span>6</span></li>
-                <li><span>7</span></li>
-                <li><span>8</span></li>
-                <li><span>9</span></li>
-                <li><span>10</span></li>
-                <li><span>11</span></li>
-                <li><span>12</span></li>
-            </ul>
-            <div class="digitalFrame">           
-                <span class="digital">00:00:<span style="color: red; font-size: 15px;">00</span></span>
+    <div class="main">
+        <div class="stopWatch">
+            <span class="timer">00:00,00</span>
+        </div>
+            <div class="buttons">
+                <div class="buttonContainer">
+                    <button class="start">Start</button>
+                </div>
+                <div class="buttonContainer">
+                    <button class="stop">Stop</button>
+                </div>
+                <div class="buttonContainer">
+                    <button class="reset">Reset</button>
+                </div>       
+                <div class="buttonContainer">
+                    <button class="save">Round</button>
+                </div>           
             </div>
-            <span class="logo">WOITI</span>
-        </div>
+            <div class="scores"></div>
+
+
     </div>
-    <div class="mainContainer">
-        <div class="inputContainer">
-            <input pattern="[0-9]*" id="second" type="number" maxlength="2" min="0"max="59" placeholder="Seconds" >
-            <input pattern="[0-9]*" id="minute" type="number" maxlength="2" min="0" max="59" placeholder="Minutes">
-            <input pattern="[0-9]*" id="hour" type="number" maxlength="2" min="0" max="12" placeholder="Hours">
-        </div>
-        <div class="spanContainer">
-            <span class="reload"></span>
-        </div>
-        <div class="btnContainer"><button>Set the clock!</button>
-            <button class="realTimeButton">Computer time</button>
-        </div>
-    </div> 
+   
+
+
+
+
     <script src="main.js"></script>
 </body>
 </html>
