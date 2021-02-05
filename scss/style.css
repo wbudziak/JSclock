@@ -228,8 +228,8 @@ body {
   border-radius: 30% 30% 0 0;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
   z-index: 3;
 }
 
@@ -244,8 +244,8 @@ body {
           transform-origin: 50% 100%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .6s linear;
-  transition: .6s linear;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
   border-radius: 30% 30% 0 0;
   z-index: 1;
 }
@@ -262,8 +262,8 @@ body {
   border-radius: 30% 30% 0 0;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .9s linear;
-  transition: .9s linear;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
   z-index: 2;
 }
 
