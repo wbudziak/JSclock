@@ -20,14 +20,6 @@ body {
   background-color: #fafafa;
 }
 
-@media (max-width: 415px) {
-  body {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-}
-
 .clockContainer {
   position: relative;
   max-width: 350px;
@@ -41,7 +33,6 @@ body {
 
 @media (max-width: 415px) {
   .clockContainer {
-    margin-top: 9vh;
     max-width: 40vh;
     width: 100%;
     max-height: 40vh;
