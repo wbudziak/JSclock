@@ -6,12 +6,10 @@
     <title>JS Clock</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/style.css">
-   
 </head>
 <body>
     <div class="clockContainer">
         <div class="underClock"></div>
-
         <div class="clock">
             <div class="circle"></div>
             <div class="godzina"></div>
@@ -37,19 +35,6 @@
             <span class="logo">WOITI</span>
         </div>
     </div>
-    <div class="mainContainer">
-        <div class="inputContainer">
-            <input pattern="[0-9]*" id="second" type="number" maxlength="2" min="0"max="59" placeholder="Seconds" >
-            <input pattern="[0-9]*" id="minute" type="number" maxlength="2" min="0" max="59" placeholder="Minutes">
-            <input pattern="[0-9]*" id="hour" type="number" maxlength="2" min="0" max="12" placeholder="Hours">
-        </div>
-        <div class="spanContainer">
-            <span class="reload"></span>
-        </div>
-        <div class="btnContainer"><button>Set the clock!</button>
-            <button class="realTimeButton">Computer time</button>
-        </div>
-    </div> 
     <script src="main.js"></script>
 </body>
 </html>

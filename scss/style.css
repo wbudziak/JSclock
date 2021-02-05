@@ -49,7 +49,7 @@ body {
   }
 }
 
-.clockContainer .underClock {
+.underClock {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -63,13 +63,13 @@ body {
 }
 
 @media (max-width: 415px) {
-  .clockContainer .underClock {
+  .underClock {
     max-width: 42vh;
     max-height: 42vh;
   }
 }
 
-.clockContainer .clock {
+.clock {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -81,7 +81,7 @@ body {
           box-shadow: inset 20px 50px 100px rgba(0, 0, 0, 0.2), inset 5px 10px 60px rgba(0, 0, 0, 0.5);
 }
 
-.clockContainer .clock .digitalFrame {
+.clock .digitalFrame {
   position: absolute;
   top: 50%;
   left: 20%;
@@ -93,11 +93,11 @@ body {
   border-radius: 5px;
 }
 
-.clockContainer .clock .digitalFrame .digital {
+.clock .digitalFrame .digital {
   font-size: 19px;
 }
 
-.clockContainer .clock .logo {
+.clock .logo {
   position: absolute;
   top: 60%;
   left: 50%;
@@ -105,12 +105,12 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.clockContainer .clock ul {
+.clock ul {
   list-style: none;
   padding: 0;
 }
 
-.clockContainer .clock li {
+.clock li {
   position: absolute;
   text-align: center;
   line-height: 20px;
@@ -119,91 +119,91 @@ body {
   transition: .3s linear;
 }
 
-.clockContainer .clock li:nth-child(1) {
+.clock li:nth-child(1) {
   right: 26%;
   top: 10%;
 }
 
-.clockContainer .clock li:nth-child(2) {
+.clock li:nth-child(2) {
   right: 10%;
   top: 26%;
 }
 
-.clockContainer .clock li:nth-child(3) {
+.clock li:nth-child(3) {
   right: 5%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.clockContainer .clock li:nth-child(4) {
+.clock li:nth-child(4) {
   right: 10%;
   top: 69%;
 }
 
-.clockContainer .clock li:nth-child(5) {
+.clock li:nth-child(5) {
   right: 26%;
   top: 85%;
 }
 
-.clockContainer .clock li:nth-child(6) {
+.clock li:nth-child(6) {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 5%;
 }
 
-.clockContainer .clock li:nth-child(7) {
+.clock li:nth-child(7) {
   left: 26%;
   top: 85%;
 }
 
-.clockContainer .clock li:nth-child(8) {
+.clock li:nth-child(8) {
   left: 10%;
   top: 69%;
 }
 
-.clockContainer .clock li:nth-child(9) {
+.clock li:nth-child(9) {
   left: 5%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.clockContainer .clock li:nth-child(10) {
+.clock li:nth-child(10) {
   left: 10%;
   top: 26%;
 }
 
-.clockContainer .clock li:nth-child(11) {
+.clock li:nth-child(11) {
   left: 26%;
   top: 10%;
 }
 
-.clockContainer .clock li:nth-child(12) {
+.clock li:nth-child(12) {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 5%;
 }
 
-.clockContainer .clock .onRed {
+.clock .onRed {
   color: red;
   font-size: 40px;
 }
 
-.clockContainer .clock .onBlack {
+.clock .onBlack {
   color: black;
   font-size: 40px;
 }
 
-.clockContainer .clock img {
+.clock img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 
-.clockContainer .clock .circle {
+.clock .circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -216,7 +216,7 @@ body {
   z-index: 4;
 }
 
-.clockContainer .clock .sekunda {
+.clock .sekunda {
   position: absolute;
   top: 15%;
   left: 50%;
@@ -233,7 +233,7 @@ body {
   z-index: 3;
 }
 
-.clockContainer .clock .minuta {
+.clock .minuta {
   position: absolute;
   top: 20%;
   left: 50%;
@@ -250,7 +250,7 @@ body {
   z-index: 1;
 }
 
-.clockContainer .clock .godzina {
+.clock .godzina {
   position: absolute;
   top: 25%;
   left: 50%;
@@ -265,121 +265,5 @@ body {
   -webkit-transition: 1s linear;
   transition: 1s linear;
   z-index: 2;
-}
-
-.mainContainer {
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 500px;
-  width: 100%;
-  max-height: 125px;
-  height: 100%;
-}
-
-@media (max-width: 415px) {
-  .mainContainer {
-    margin-bottom: 25vh;
-  }
-}
-
-.mainContainer .inputContainer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (max-width: 415px) {
-  .mainContainer .inputContainer {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin-top: 4vh;
-  }
-}
-
-.mainContainer .inputContainer input[type=number] {
-  -webkit-appearance: none;
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid gray;
-  text-align: center;
-  outline: none;
-  max-width: 125px;
-  width: 100%;
-  height: 35px;
-}
-
-@media (max-width: 415px) {
-  .mainContainer .inputContainer input[type=number] {
-    width: 25%;
-    height: 50px;
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-}
-
-.mainContainer .spanContainer {
-  cursor: pointer;
-}
-
-.mainContainer .btnContainer {
-  width: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (max-width: 415px) {
-  .mainContainer .btnContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.mainContainer .btnContainer button {
-  width: 220px;
-  height: 50px;
-  border-radius: 15px;
-  background: none;
-  border: 1px solid gray;
-  cursor: pointer;
-  outline: none;
-  color: gray;
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
-  font-size: 16px;
-}
-
-@media (max-width: 415px) {
-  .mainContainer .btnContainer button {
-    margin-top: 1vh;
-  }
 }
 /*# sourceMappingURL=style.css.map */

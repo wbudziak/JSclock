@@ -1,15 +1,7 @@
-const secInput = document.querySelector("#second");
-const minInput = document.querySelector("#minute");
-const hourInput = document.querySelector("#hour");
 const digital = document.querySelector(".digital");
-const numbers = document.querySelectorAll("span");
-const btn = document.querySelector("button");
-const btnRealTime = document.querySelector(".realTimeButton");
 const secondHand = document.querySelector(".sekunda");
 const minutesHand = document.querySelector(".minuta");
 const hourHand = document.querySelector(".godzina");
-const reload = document.querySelector(".reload");
-
 actualTime = function(){
     let time = new Date();
     let actualHours = time.getHours();
@@ -37,7 +29,6 @@ actualTime = function(){
     const secInterval = setInterval(() => {
     rotateSec+=6;
     secondHand.style.transform = `rotate(${rotateSec+6}deg)`;
-    // Dodałem +6, poniewaz jezeli dam animacje 1s to sekundnik sie spoznia
     }, 1000);
 
 // wskazówka minuty
@@ -52,7 +43,7 @@ actualTime = function(){
     }, 60000);
    }, timeLeftToFullMinute);
 
-//    wskasówka godziny
+//    wskazówka godziny
 
    let convertToMilSec = (actualSeconds*1000) + (actualMinutes * 60000);
    let timeLeftToFullHour = 3600000 - convertToMilSec;
@@ -65,8 +56,7 @@ actualTime = function(){
     }, 3600000);
    }, timeLeftToFullHour);
 }
-btnRealTime.addEventListener('click', actualTime)
-
+actualTime()
 digitalClock = function(){
     digitalActualTime = function(){ 
        setInterval(() => {
@@ -74,10 +64,11 @@ digitalClock = function(){
         let actualHours = time.getHours();
         let actualMinutes = time.getMinutes();
         let actualSeconds= time.getSeconds();
-        console.log(actualHours,actualMinutes,actualSeconds);
         digital.innerHTML = `${actualHours < 10 ? `0${actualHours}`: actualHours }:${actualMinutes < 10 ? `0${actualMinutes}`: actualMinutes }:<span style = "font-size:15px; color:red;">${actualSeconds < 10 ? `0${actualSeconds}`: actualSeconds }`;
        }, 1000);
     }
-    btnRealTime.addEventListener('click', digitalActualTime)
+    digitalActualTime();
 }
 digitalClock();
+
+
