@@ -1,7 +1,7 @@
 const digital = document.querySelector(".digital");
-const secondHand = document.querySelector(".sekunda");
-const minutesHand = document.querySelector(".minuta");
-const hourHand = document.querySelector(".godzina");
+const secondHand = document.querySelector(".second");
+const minutesHand = document.querySelector(".minute");
+const hourHand = document.querySelector(".hour");
 actualTime = function(){
     let time = new Date();
     let actualHours = time.getHours();

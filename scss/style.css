@@ -207,7 +207,7 @@ body {
   z-index: 4;
 }
 
-.clock .sekunda {
+.clock .second {
   position: absolute;
   top: 15%;
   left: 50%;
@@ -224,7 +224,7 @@ body {
   z-index: 3;
 }
 
-.clock .minuta {
+.clock .minute {
   position: absolute;
   top: 20%;
   left: 50%;
@@ -241,7 +241,7 @@ body {
   z-index: 1;
 }
 
-.clock .godzina {
+.clock .hour {
   position: absolute;
   top: 25%;
   left: 50%;

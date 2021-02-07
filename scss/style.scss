@@ -157,7 +157,7 @@ body{
         background-color: rgb(38, 43, 48);
         z-index: 4;
     }
-    .sekunda{
+    .second{
         position: absolute;
         top: 15%;
         left: 50%;
@@ -170,7 +170,7 @@ body{
         transition: 1s linear;      
         z-index: 3;
     }
-    .minuta{
+    .minute{
         position: absolute;
         top: 20%;
         left: 50%;
@@ -183,7 +183,7 @@ body{
         border-radius: 30% 30% 0 0;
         z-index: 1;
     }
-    .godzina{
+    .hour{
         position: absolute;
         top: 25%;
         left: 50%;
