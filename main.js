@@ -51,20 +51,24 @@ actualTime = function(){
     rotateHour+=30;
     hourHand.style.transform = `rotate(${rotateHour}deg)`;
     setInterval(() => {
-    rotateHour+=30;
+    rotateHour+=3;
     hourHand.style.transform = `rotate(${rotateHour}deg)`;
-    }, 3600000);
+    }, 150000);
    }, timeLeftToFullHour);
 }
 actualTime()
 digitalClock = function(){
     digitalActualTime = function(){ 
+        const startDigital = ()=>{
+            let time = new Date();
+            let actualHours = time.getHours();
+            let actualMinutes = time.getMinutes();
+            let actualSeconds= time.getSeconds();
+            digital.innerHTML = `${actualHours < 10 ? `0${actualHours}`: actualHours }:${actualMinutes < 10 ? `0${actualMinutes}`: actualMinutes }:<span style = "font-size:15px; color:red;">${actualSeconds < 10 ? `0${actualSeconds}`: actualSeconds }`;
+        }
+        startDigital();
        setInterval(() => {
-        let time = new Date();
-        let actualHours = time.getHours();
-        let actualMinutes = time.getMinutes();
-        let actualSeconds= time.getSeconds();
-        digital.innerHTML = `${actualHours < 10 ? `0${actualHours}`: actualHours }:${actualMinutes < 10 ? `0${actualMinutes}`: actualMinutes }:<span style = "font-size:15px; color:red;">${actualSeconds < 10 ? `0${actualSeconds}`: actualSeconds }`;
+        startDigital();
        }, 1000);
     }
     digitalActualTime();
