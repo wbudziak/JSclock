@@ -47,9 +47,10 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 50%;
-  width: 370px;
-  height: 370px;
-  background-color: black;
+  -webkit-box-shadow: inset 2px 3px 8px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 2px 3px 8px 2px rgba(0, 0, 0, 0.3);
+  width: 375px;
+  height: 375px;
   z-index: -99999;
 }
 
@@ -219,8 +220,8 @@ body {
   border-radius: 30% 30% 0 0;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
+  -webkit-transition: 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  transition: 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
   z-index: 3;
 }
 
@@ -235,8 +236,8 @@ body {
           transform-origin: 50% 100%;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
+  -webkit-transition: 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  transition: 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
   border-radius: 30% 30% 0 0;
   z-index: 1;
 }
@@ -253,8 +254,8 @@ body {
   border-radius: 30% 30% 0 0;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
+  -webkit-transition: 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+  transition: 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
   z-index: 2;
 }
 /*# sourceMappingURL=style.css.map */

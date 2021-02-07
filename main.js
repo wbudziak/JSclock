@@ -28,7 +28,7 @@ actualTime = function(){
 
     const secInterval = setInterval(() => {
     rotateSec+=6;
-    secondHand.style.transform = `rotate(${rotateSec+6}deg)`;
+    secondHand.style.transform = `rotate(${rotateSec}deg)`;
     }, 1000);
 
 // wskazówka minuty
