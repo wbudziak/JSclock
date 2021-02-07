@@ -51,9 +51,9 @@ actualTime = function(){
     rotateHour+=30;
     hourHand.style.transform = `rotate(${rotateHour}deg)`;
     setInterval(() => {
-    rotateHour+=3;
+    rotateHour+=30;
     hourHand.style.transform = `rotate(${rotateHour}deg)`;
-    }, 150000);
+    }, 3600000);
    }, timeLeftToFullHour);
 }
 actualTime()
