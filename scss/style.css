@@ -17,7 +17,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Lato', sans-serif;
-  background-color: #fafafa;
 }
 
 .clockContainer {
@@ -49,6 +48,7 @@ body {
   border-radius: 50%;
   -webkit-box-shadow: inset 2px 3px 8px 2px rgba(0, 0, 0, 0.3);
           box-shadow: inset 2px 3px 8px 2px rgba(0, 0, 0, 0.3);
+  background: white;
   width: 375px;
   height: 375px;
   z-index: -99999;
@@ -87,6 +87,7 @@ body {
 
 .clock .digitalFrame .digital {
   font-size: 19px;
+  color: #464545;
 }
 
 .clock .logo {
@@ -95,6 +96,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  color: #464545;
 }
 
 .clock ul {
@@ -109,6 +111,7 @@ body {
   font-size: 30px;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+  color: #464545;
 }
 
 .clock li:nth-child(1) {
@@ -201,10 +204,10 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 18px;
-  height: 18px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: #262b30;
+  background-color: #464545;
   z-index: 4;
 }
 
@@ -229,7 +232,7 @@ body {
   position: absolute;
   top: 20%;
   left: 50%;
-  background-color: #3e4347;
+  background-color: #464545;
   width: 3px;
   height: 30%;
   -webkit-transform-origin: 50% 100%;
