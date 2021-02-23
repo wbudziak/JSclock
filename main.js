@@ -1,78 +1,73 @@
-const digital = document.querySelector(".digital");
+const digital = document.querySelector(".digital-hour-min");
+const digitalSeconds = document.querySelector(".digital-seconds");
 const secondHand = document.querySelector(".second");
 const minutesHand = document.querySelector(".minute");
 const hourHand = document.querySelector(".hour");
-actualTime = function(){
+actualTime = function () {
     let time = new Date();
     let actualHours = time.getHours();
     let actualMinutes = time.getMinutes();
-    let actualSeconds= time.getSeconds();
+    let actualSeconds = time.getSeconds();
     let rotateHour = 0;
     let rotateMin = 0;
     let rotateSec = 0;
 
-    for(let i =0; i<actualSeconds; i++){
-        rotateSec+=6;
+    for (let i = 0; i < actualSeconds; i++) {
+        rotateSec += 6;
         secondHand.style.transform = `rotate(${rotateSec}deg)`;
     }
-    for(let i =0; i<actualHours; i++){
-        rotateHour+=30;
+    for (let i = 0; i < actualHours; i++) {
+        rotateHour += 30;
         hourHand.style.transform = `rotate(${rotateHour}deg)`;
     }
-    for(let i =0; i<actualMinutes; i++){
-        rotateMin+=6;
+    for (let i = 0; i < actualMinutes; i++) {
+        rotateMin += 6;
         minutesHand.style.transform = `rotate(${rotateMin}deg)`;
     }
 
-// wskazówka sekundy
+    // second hand
 
     const secInterval = setInterval(() => {
-    rotateSec+=6;
-    secondHand.style.transform = `rotate(${rotateSec}deg)`;
+        rotateSec += 6;
+        secondHand.style.transform = `rotate(${rotateSec}deg)`;
     }, 1000);
 
-// wskazówka minuty
+    // minute hand
 
-   let timeLeftToFullMinute = 60000 - (actualSeconds * 1000);
-   setTimeout(() => {
-    rotateMin+=6;
-    minutesHand.style.transform = `rotate(${rotateMin}deg)`;
-    setInterval(() => {
-    rotateMin+=6;
-    minutesHand.style.transform = `rotate(${rotateMin}deg)`;
-    }, 60000);
-   }, timeLeftToFullMinute);
+    let timeLeftToFullMinute = 60000 - (actualSeconds * 1000);
+    setTimeout(() => {
+        rotateMin += 6;
+        minutesHand.style.transform = `rotate(${rotateMin}deg)`;
+        setInterval(() => {
+            rotateMin += 6;
+            minutesHand.style.transform = `rotate(${rotateMin}deg)`;
+        }, 60000);
+    }, timeLeftToFullMinute);
 
-//    wskazówka godziny
+    // hour hand
 
-   let convertToMilSec = (actualSeconds*1000) + (actualMinutes * 60000);
-   let timeLeftToFullHour = 3600000 - convertToMilSec;
-   setTimeout(() => {
-    rotateHour+=30;
-    hourHand.style.transform = `rotate(${rotateHour}deg)`;
-    setInterval(() => {
-    rotateHour+=30;
-    hourHand.style.transform = `rotate(${rotateHour}deg)`;
-    }, 3600000);
-   }, timeLeftToFullHour);
+    let convertToMilSec = (actualSeconds * 1000) + (actualMinutes * 60000);
+    let timeLeftToFullHour = 3600000 - convertToMilSec;
+    setTimeout(() => {
+        rotateHour += 30;
+        hourHand.style.transform = `rotate(${rotateHour}deg)`;
+        setInterval(() => {
+            rotateHour += 30;
+            hourHand.style.transform = `rotate(${rotateHour}deg)`;
+        }, 3600000);
+    }, timeLeftToFullHour);
 }
 actualTime()
-digitalClock = function(){
-    digitalActualTime = function(){ 
-        const startDigital = ()=>{
-            let time = new Date();
-            let actualHours = time.getHours();
-            let actualMinutes = time.getMinutes();
-            let actualSeconds= time.getSeconds();
-            digital.innerHTML = `${actualHours < 10 ? `0${actualHours}`: actualHours }:${actualMinutes < 10 ? `0${actualMinutes}`: actualMinutes }:<span style = "font-size:15px; color:red;">${actualSeconds < 10 ? `0${actualSeconds}`: actualSeconds }`;
-        }
-        startDigital();
-       setInterval(() => {
-        startDigital();
-       }, 1000);
-    }
-    digitalActualTime();
+
+const digitalTime = () => {
+    let time = new Date();
+    let actualHours = time.getHours();
+    let actualMinutes = time.getMinutes();
+    let actualSeconds = time.getSeconds();
+    digital.textContent = `${actualHours < 10 ? `0${actualHours}`: actualHours }:${actualMinutes < 10 ? `0${actualMinutes}`: actualMinutes }:`;
+    digitalSeconds.textContent = `${actualSeconds < 10 ? `0${actualSeconds}`: actualSeconds }`;
+    setInterval(() => {
+        digitalTime();
+    }, 1000);
 }
-digitalClock();
-
-
+digitalTime();
