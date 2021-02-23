@@ -66,8 +66,6 @@ const digitalTime = () => {
     let actualSeconds = time.getSeconds();
     digital.textContent = `${actualHours < 10 ? `0${actualHours}`: actualHours }:${actualMinutes < 10 ? `0${actualMinutes}`: actualMinutes }:`;
     digitalSeconds.textContent = `${actualSeconds < 10 ? `0${actualSeconds}`: actualSeconds }`;
-    setInterval(() => {
-        digitalTime();
-    }, 1000);
 }
 digitalTime();
+setInterval(digitalTime,1000);
